@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<style>
+.fill{
+	width:150px;height:150px;border: 1px solid;background: grey;border-radius: 0px;
+}
+    
+   
+
+  </style>
+<p>Tables of <input type="number" id="multiplyWith" /> </p>
+<button onclick="myFunction()">Click me</button>
+
+
+<p>Tables: <br><span id="demo"></span> </p>
+
+<div id="data">
+
+</div>
+
+    
+<script>
+
+
+function myFunction() {
+ 
+var i=1;
+var j = document.getElementById("multiplyWith").value;
+var k;
+var result;
+
+var res ='';
+var re = j;
+
+for(k=1; k<=j; k++){
+	 res +='<div id="data" style="width:150px;height:200px;border: 1px solid;background: grey;border-radius: 0px;">';
+   for(i=1; i<11; i++){
+       result = i * k;
+       res += k + "*" + i + "=" +result+ "<br>" ;   
+     }
+  res +='</div>';
+
+}
+$("#data").html(res);	
+}  
+
+
+</script>
+
+</body>
+</html>
